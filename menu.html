@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<base target="_parent">
+	<link rel='stylesheet' type='text/css' href='style.css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<body>
+
+<div class="menulist">
+	[<a href="/" title="Lopchan">Home</a>]
+	[<a href="https://discord.gg/ZFMzqrceXV" title="Discord Invite" target="_blank">Discord</a>]
+	[ <b><button class="button" type="button" onclick="aud_vol_decrease()">-</button> <button class="button" type="button" onclick="aud_play_pause()">&#x1F39D;</button> <button class="button" type="button" onclick="aud_vol_increase()">+</button></b> ]
+</div>
+
+<div class="m_menulist">
+	[ <a href="/" title="Lopchan">Home</a> ]
+	&nbsp;&nbsp;
+	[ <a href="https://discord.gg/ZFMzqrceXV" title="Discord Invite" target="_blank">Discord</a> ]
+	&nbsp;&nbsp;
+	[ <b><button class="button" type="button" onclick="aud_vol_decrease()">-</button> <button class="button" type="button" onclick="aud_play_pause()">&#x1F39D;</button> <button class="button" type="button" onclick="aud_vol_increase()">+</button></b> ]
+</div>
+
+<audio id="jukebox" src="fly_me_to_the_moon_asuka.mp3" loop="true"></audio>
+
+<script>
+function aud_play_pause() {
+	var jukesong = document.getElementById("jukebox");
+	if (jukesong.paused) {
+		jukesong.play();
+	} else {
+		jukesong.pause();
+	}
+}
+function aud_vol_decrease() {
+	var jukesong = document.getElementById("jukebox");
+	jukesong.volume -= 0.1;
+}
+function aud_vol_increase() {
+	var jukesong = document.getElementById("jukebox");
+	jukesong.volume += 0.1;
+}
+</script>
+
+</body>
+</html>
